@@ -5,6 +5,8 @@
 
   outputs = { self, nixpkgs }:
     let
+      version = "1.0";
+
       supportedSystems = [ "x86_64-linux" "aarch64-linux" ];
 
       forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
